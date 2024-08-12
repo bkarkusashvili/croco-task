@@ -1,0 +1,7 @@
+<ng-container *ngIf="data$ | async as data">
+  <app-slot-category
+    [categories]="data[0]"
+    [providers]="data[1]"
+  ></app-slot-category>
+  <app-slot-games [games]="games"></app-slot-games>
+</ng-container>

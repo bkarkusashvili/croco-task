@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="item" *ngFor="let item of games">
+    <img [src]="item.image" alt="" srcset="" />
+    <span class="title">{{ item.name }}</span>
+    <div class="over">
+      <a [href]="item.url" target="_blank">Play</a>
+    </div>
+  </div>
+</div>

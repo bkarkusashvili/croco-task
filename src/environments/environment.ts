@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API: 'https://cms.crocobet.com/integrations',
+  APIV2: 'https://cms.crocobet.com/integrations/v2',
 };
 
 /*

@@ -1,0 +1,109 @@
+.container {
+  background-color: #1d242c;
+  margin-left: 7.76px;
+  margin-bottom: 12px;
+  margin-right: 4.2px;
+
+  .categories {
+    display: flex;
+    height: 54px;
+    padding: 19px 20px 0 20px;
+
+    .item {
+      position: relative;
+      display: flex;
+      position: relative;
+      margin-right: 40px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #ffffff;
+
+      app-svg-icon {
+        margin-right: 10px;
+
+        ::ng-deep {
+          svg *[stroke] {
+            stroke: #bbbdc0 !important;
+          }
+
+          svg *[fill] {
+            fill: #bbbdc0 !important;
+          }
+        }
+      }
+
+      .total-games {
+        position: absolute;
+        top: -10px;
+        right: -12px;
+        font-size: 11px;
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      &.active {
+        app-svg-icon {
+          ::ng-deep {
+            svg *[stroke] {
+              stroke: #189541 !important;
+            }
+
+            svg *[fill] {
+              fill: #189541 !important;
+            }
+          }
+        }
+
+        .total-games {
+          color: #15af44;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: -5px;
+          width: calc(100% + 10px);
+          height: 4px;
+          border-radius: 10px 10px 0 0;
+          background-color: #15af44;
+        }
+      }
+    }
+  }
+
+  .sub-categories {
+    display: flex;
+    justify-content: space-between;
+    background-color: #272d36;
+    padding: 17px 15px 7px 17px;
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        font-size: 14px;
+        color: #d9e3ef;
+        text-decoration: none;
+        margin-right: 27px;
+        margin-bottom: 15px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &.active {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .more {
+      cursor: pointer;
+      flex-shrink: 0;
+      color: #ffffff;
+      font-weight: bold;
+    }
+  }
+}

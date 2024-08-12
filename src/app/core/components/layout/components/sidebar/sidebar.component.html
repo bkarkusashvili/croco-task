@@ -1,1 +1,15 @@
-<p>sidebar works!</p>
+<aside>
+  <a class="logo" routerLink="/">
+    <img src="/assets/images/logo.png" alt="CrocoBet" />
+  </a>
+  <nav>
+    <a
+      *ngFor="let item of menuItems"
+      [routerLink]="item.link"
+      routerLinkActive="active"
+    >
+      <i class="icon icon-{{ item.icon }}"></i>
+      {{ item.text }}
+    </a>
+  </nav>
+</aside>
